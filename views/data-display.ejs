@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/highlight.min.js" integrity="sha512-6yoqbrcLAHDWAdQmiRlHG4+m0g/CT/V9AGyxabG8j7Jk8j3r3K6due7oqpiRMZqcYe9WM2gPcaNNxnl2ux+3tA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.10.0/styles/panda-syntax-dark.min.css" integrity="sha512-Sh1NKPMID6K3pGC7EAIDrRmeXaHK7H+b+qqxybAzEomLe2qoaU6O00GhhNIv7o9qJOv+TQt+1FjWvN+fC6V4CA==" crossorigin="anonymous" referrerpolicy="no-referrer" />    
+    <link rel="stylesheet" href="./styles.css">
+    <script>hljs.highlightAll();</script>
+    <title>Document</title>
+</head>
+<body>
+    <%- include("_buttons.ejs",{id:locals.id})  %>
+    <div class="wrapper">
+        <div class="line-numbers">
+            <% for(let i = 1; i <= data.split('\n').length; i++) { %>
+                <div><%= i %></div>
+            <% } %>
+        </div>
+        <pre><code id="code-display" class="<%= locals.language ? `language-${locals.language}`  :""%>"  > <%= data %> </code></pre>
+    </div>
+    
+</body>
+</html>
