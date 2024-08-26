@@ -9,7 +9,7 @@ const Document = require("./models/Document");
 const mongoose = require('mongoose');
 
 // Replace the connection string with your MongoDB Atlas URI----    ======>
-mongoose.connect("mongodb+srv://hex:hex007@cluster0.hb6e1.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
+mongoose.connect("<your ul>")
 .then(() => console.log('Connected to MongoDB'))
 .catch(err => console.error('Failed to connect to MongoDB', err));;
 
